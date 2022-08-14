@@ -19,8 +19,8 @@ app.use('/auth',signup);
 app.use('/auth',login);
 app.use('/api',post);
 
-const port=3000;
-app.listen(3000,"192.168.1.6",()=>{
+const port=process.env.PORT||5000
+app.listen(port,()=>{
     console.log(`Listening on port ${port}`)
 });
 
