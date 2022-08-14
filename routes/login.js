@@ -24,7 +24,7 @@ try{
       const validPassword = await bcrypt.compare(newUser.password, user.password);
   
       if (validPassword) {
-        const token = jwt.sign({ _id: user._id,username:user.username,pic:user.pic,followers:user.followers,followings:user.followings }, process.env.SECRET_KEY);
+        const token = jwt.sign({ _id: user._id,username:user.username,pic:user.pic,followers:user.followers,followings:user.followings },"fjsdofjsdofiasdjfhjsdfhjnsdflkgdjshngjkdlhjfgoigfujgfhdjgklfguyfoigfdglfkdgjnfdslgjfdsgklfdshjgfodigugoerutoreiutregngfdngfdghjfghfdghfgjgfdjlgjfdsgofgjufgfjsglfgjflgjfdsglujgoifgujfdslk");
         res.status(200).json(token);
       } else {
         res.status(400).json("Invalid credentials");
