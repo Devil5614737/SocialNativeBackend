@@ -12,7 +12,7 @@ dotenv.config({path:'./.env'});
 app.use(cors());
 app.use(express.json())
 
-mongoose.connect(process.env.URI, { useNewUrlParser: true, useUnifiedTopology: true}).then(()=>console.log("connected to mongodb")).catch(error=>console.log(error));
+mongoose.connect("mongodb+srv://devil5614737:SqpmVpN2281Wq0AC@cluster0.qmtzfub.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true}).then(()=>console.log("connected to mongodb")).catch(error=>console.log(error));
 
 
 app.use('/auth',signup);
